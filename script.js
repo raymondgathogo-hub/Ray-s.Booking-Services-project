@@ -1,15 +1,28 @@
-function bookRoom(){
-    let name = document.getElementById("name").ariaValueMax;
-    let date = document.getElementById("date").ariaValueMax;
+
+function bookRoom(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const date = document.getElementById("date").value;
+
+    if (name === "" || date === "") {
+        alert("Please fill in info");
+        return;
+    }
+
+    alert("Booking successful!\n" +
+        "Name: " + name + "\n" +
+        "Date: " + date);
+    window.location.href = "success.html";
 }
 
-if (name ===""||date ==="") {
-    alert("Plese fill in info")
-    
-} else {
-    alert("Booking succesful!\n"+
-        "Name:" + name +"\n"+
-        "Date:" + date + "\n"+
-    )
-    
+function bookSkylineApartment(){
+    alert("You selected the skyline apartment")
+}
+
+function bookHolidayHouse(){
+    alert("You selected the holiday house")
+}
+
+function bookBeachHouse(){
+    alert("You selected the beach house")
 }
