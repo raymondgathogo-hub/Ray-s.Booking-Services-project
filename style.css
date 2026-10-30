@@ -33,7 +33,7 @@ input,select{
 
 button{
     background-color: darkgrey;
-    color: antiquewhite;
+    color: black;
     padding: 12px;
     border-radius: 15px;
     width: 50%;
@@ -43,4 +43,19 @@ button{
 }
 button:hover{
     background-color: antiquewhite;
+}
+
+nav{
+    display: flex;
+    float: right;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 15px;
+    background-color: darkblue;
+
+}
+
+nav a{
+    color: antiquewhite;
+    text-decoration: #555;
 }
