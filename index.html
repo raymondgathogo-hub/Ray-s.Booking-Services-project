@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find and book comfortable BnB stays in Nairobi, Naivasha, Nakuru, and Mombasa.">
     <title>Ray's.Booking Services</title>
     <link rel="stylesheet" href="style.css">
-    <nav>
-    <a href="index.html">Booking</a>
-    <a href="about.html">About us</a>
-    <a href="contact.html">Contact us</a>
-</nav>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html">Booking</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact us</a>
+        </nav>
+    </header>
+    <main>
     <h1>Ray's.Booking Services</h1>
     <p>Find a place that feels like home.</p> 
 
+    <section>
     <h2>Available Houses</h2>
 
     <h3>SKYLINE APARTMENTS</h3>
@@ -40,39 +45,25 @@
     <p>Price:ksh 5,500 per night</p>
     <button onclick="bookBeachHouse()">Book Right Now</button>
 
+    </section>
+    <section>
     <h2>Book with us</h2>
 
-    <form onsubmit="bookRoom(event)">
-        <label>Full Name</label>
-        <input id="name" type="text" required>
-        <br><br>
+    <form id="bookingForm">
+        <input type="text" id="customersName" placeholder="Your name" required>
 
-        <label>Email</label>
-        <input type="email"required>
-        <br><br>
+        <input type="date" id="checkIn" required>
 
-        <label>Check-in date</label>
-        <input id="date" type="date" required>
-        <br><br>
+        <input type="date" id="checkOut" required>
 
-        <label>Check-out date</label>
-        <input type="date">
-        <br><br>
+        <button type="submit">Book Now</button>
 
-        <button type="submit">Submit info</button>
+
 
         
     </form>
-
-
-
-
-
-    
-
-    
-
-    
+    </section>
+    </main>
 
 
 <script src="script.js"></script>

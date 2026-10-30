@@ -1,28 +1,35 @@
+function startBooking() {
+    document.getElementById("bookingForm").scrollIntoView();
+    document.getElementById("customersName").focus();
+}
 
-function bookRoom(event) {
+function bookSkylineApartment() {
+    startBooking();
+}
+
+function bookHolidayHouse() {
+    startBooking();
+}
+
+function bookBeachHouse() {
+    startBooking();
+}
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+
     event.preventDefault();
-    const name = document.getElementById("name").value;
-    const date = document.getElementById("date").value;
 
-    if (name === "" || date === "") {
-        alert("Please fill in info");
-        return;
-    }
+    let booking = {
+        name: document.getElementById("customersName").value,
+        checkIn: document.getElementById("checkIn").value,
+        checkOut: document.getElementById("checkOut").value
 
-    alert("Booking successful!\n" +
-        "Name: " + name + "\n" +
-        "Date: " + date);
-    window.location.href = "success.html";
-}
+    };
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
-function bookSkylineApartment(){
-    alert("You selected the skyline apartment")
-}
+    bookings.push(booking);
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+    
+    alert("Booking succesful!");
 
-function bookHolidayHouse(){
-    alert("You selected the holiday house")
-}
-
-function bookBeachHouse(){
-    alert("You selected the beach house")
-}
+});
