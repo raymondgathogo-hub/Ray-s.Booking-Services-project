@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ray's.Booking Services</title>
     <link rel="stylesheet" href="style.css">
+    <nav>
+    <a href="index.html">Booking</a>
+    <a href="about.html">About us</a>
+    <a href="contact.html">Contact us</a>
+</nav>
 </head>
 <body>
     <h1>Ray's.Booking Services</h1>
@@ -15,30 +20,31 @@
     <h3>SKYLINE APARTMENTS</h3>
     <p>location:Nairobi</p>
     <p>Price:ksh 2,500 per night</p>
-    <button>Book Right Now</button>
+    <button onclick="bookSkylineApartment()">Book Right Now</button>
+    
 
 
     <h3>Holiday House</h3>
     <p>location:Naivasha</p>
     <p>Price:ksh 3,500 per night</p>
-    <button>Book Right Now</button>
+    <button onclick="bookHolidayHouse()">Book Right Now</button>
 
 
     <h3>Holiday House</h3>
-    <p>location:Naivasha</p>
-    <p>Price:ksh 3,500 per night</p>
-    <button>Book Right Now</button>
+    <p>location:Nakuru </p>
+    <p>Price:ksh 4,500 per night</p>
+    <button onclick="bookHolidayHouse()">Book Right Now</button>
 
     <h3>Beach house</h3>
     <p>location:Mombasa</p>
     <p>Price:ksh 5,500 per night</p>
-    <button>Book Right Now</button>
+    <button onclick="bookBeachHouse()">Book Right Now</button>
 
     <h2>Book with us</h2>
 
-    <form >
+    <form onsubmit="bookRoom(event)">
         <label>Full Name</label>
-        <input type="text"required>
+        <input id="name" type="text" required>
         <br><br>
 
         <label>Email</label>
@@ -46,7 +52,7 @@
         <br><br>
 
         <label>Check-in date</label>
-        <input type="date"required>
+        <input id="date" type="date" required>
         <br><br>
 
         <label>Check-out date</label>
@@ -54,19 +60,22 @@
         <br><br>
 
         <button type="submit">Submit info</button>
+
+        
     </form>
 
 
 
 
-    
 
     
 
     
 
+    
 
 
+<script src="script.js"></script>
     
 </body>
 </html>
